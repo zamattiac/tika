@@ -200,7 +200,7 @@ public class ForkParserIntegrationTest {
        try {
           ContentHandler output = new BodyContentHandler();
           InputStream stream = ForkParserIntegrationTest.class.getResourceAsStream(
-              "/test-documents/testTXT.txt");
+                  "/test-documents/testTXT.txt");
           parser.parse(stream, output, new Metadata(), context);
           fail("Should have blown up with a non serializable ParseContext");
        } catch(TikaException e) {
