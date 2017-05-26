@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'mvn --version'
 		sh 'echo "hello"'
+		sh 'mvn compile'
             }
         }
     }
