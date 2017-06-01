@@ -11,6 +11,8 @@ sudo yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum makecache fast
 sudo yum -y install docker-ce-17.03.1.ce-1.el7.centos
+# Start the daemon
 sudo service docker start
 echo -e "\033[0;31mRan 'service docker start' for you to start Docker daemon \033[0m"
-
+# Test that Docker is working
+docker run hello-world
