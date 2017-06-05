@@ -1,9 +1,8 @@
+# This Dockerfile assumes the workspace is mounted as /source
+# Performs no build, Maven must be called as a build step.
+
 # Extend the maven image in this one.
 # The maven image will be pulled remotely if necessary
 FROM maven
 
-# Uncomment this line to include the source code in the image.
-# This requires rebuilding each time code changes.
-# COPY . /
-
-CMD "echo 'Inside the container'"
+CMD ["echo", "Inside the container"]
