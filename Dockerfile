@@ -5,4 +5,4 @@
 # The maven image will be pulled remotely if necessary
 FROM maven
 
-CMD ["echo", "Inside the container"]
+ENTRYPOINT ["echo", "Inside the container"]
