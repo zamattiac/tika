@@ -1,2 +1,2 @@
 FROM maven
-ENTRYPOINT ["whoami"]
+CMD ["whoami"]
