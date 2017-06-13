@@ -1,0 +1,5 @@
+tika_container:
+  image:
+    tika
+  volumes:
+    - `pwd`:/source
