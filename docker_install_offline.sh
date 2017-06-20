@@ -92,4 +92,9 @@ if [ $tar_path ]; then
 	IFS=: read -r host port <<< $reg_addr
 	docker run -d -p 5000:$port --restart=always --name registry registry:2
 	echo "Registry 'registry' started on " $host:$port
+	# Open port on the network
+	# These commands are CentOS ONLY. Please change for other distros.	
+	firewall-cmd --zone=public --add-port=$port/tcp --permanent
+	firewall-cmd --reload
+
 fi
